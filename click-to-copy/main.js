@@ -164,17 +164,6 @@ class ClickToCopy extends HTMLElement {
       }, confirm.confirmDuration);
     });
   }
-
-  static get observedAttributes() {
-    return ["label"];
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name !== "label" || oldValue === newValue) {
-      return;
-    }
-    this.label = newValue;
-  }
 }
 
 customElements.define("click-to-copy", ClickToCopy);
